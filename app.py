@@ -60,12 +60,13 @@ def convert(inp, outp):
     # Generate a text clip 
     txt_clip = TextClip(name, fontsize = 62, color = 'white', font = "Cantarell") 
         
-    # setting position of text in the center horizontally and 4/6 vertically and duration will be the duration of the soundfile 
-    txt_clip = txt_clip.set_pos( ((w/8)*5,"center") ).set_duration(l)
+    # setting position of text centered and duration will be the duration of the soundfile 
+    txt_clip = txt_clip.set_pos(("center", "center")).set_duration(l)
     
     #Compose
     print("-> Composing clips...")
-    final = CompositeVideoClip([cover, txt_clip], size = moviesize)
+    txt_composite = CompositeVideoClip([txt_clip], size=(int(w/2),h))
+    final = CompositeVideoClip([cover, txt_composite.set_position(("right", "center"))], size = moviesize)
     final.audio = new_audioclip
     
     #Export

@@ -57,8 +57,17 @@ def convert(inp, outp):
     audioclip = AudioFileClip(inp)
     new_audioclip = CompositeAudioClip([audioclip])
 
+    font_size = 62
+    name_part2 = name.split("\n")[1]
+    if len(name_part2) > 15:
+        font_size = 52
+    if len(name_part2) > 20:
+        font_size = 42
+    if len(name_part2) > 25:
+        font_size = 32
+
     # Generate a text clip 
-    txt_clip = TextClip(name, fontsize = 62, color = 'white', font = "Cantarell") 
+    txt_clip = TextClip(name, fontsize = font_size, color = 'white', font = "Cantarell") 
         
     # setting position of text centered and duration will be the duration of the soundfile 
     txt_clip = txt_clip.set_pos(("center", "center")).set_duration(l)

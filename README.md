@@ -11,3 +11,6 @@ Install [python3](https://www.python.org/downloads/), then run [run_all.sh](#run
 
 ## license
 Licenced under the MIT license © Elias Arno Eskelinen 2022, consult [the license file](LICENSE) for further details.
+
+## Troubleshooting
+Please open a github issue if you know how to do that, or contact me at audvd@eliaseskelinen.fi

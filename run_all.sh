@@ -12,7 +12,7 @@ rm -rf ./music
 echo "Downloading all podcasts from soundcloud as .wav files to ./music"
 mkdir music
 cd music
-youtube-dl --extract-audio --audio-format wav https://soundcloud.com/user-208824705-387464785/tracks
+youtube-dl --extract-audio --audio-format wav --write-thumbnail https://soundcloud.com/user-208824705-387464785/tracks
 # Convert all audiofiles in ./music to videos in ./out, skip confirmations
 echo "Converting all audiofiles in ./music to videos in ./out"
 cd ..

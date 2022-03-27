@@ -2,7 +2,7 @@
 A simple script to convert audioclips to video
 
 ## run_all.sh
-this script downloads all podcasts from the soundcloud channel "KSYK Teatteri-podi" to the folder "music" with [youtube-dl](https://ytdl-org.github.io/youtube-dl/) and converts them automatically into video files in "out".
+this script downloads all podcasts from the soundcloud channel "KSYK Teatteri-podi" to the folder "music" with [youtube-dl](https://yt-dl.org/) and converts them automatically into video files in "out".
 
 Install youtube-dl before running this script.
 

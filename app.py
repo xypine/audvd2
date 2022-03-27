@@ -54,6 +54,11 @@ def convert(inp, outp):
     name = os.path.basename(str(inp))
     name = "\n".join(name.split("-")[:2])
     cover = ImageClip("./img/web.jpg")
+    ideal_img_name = inp.replace(".wav", ".jpg")
+    try:
+        cover = ImageClip(ideal_img_name)
+    except:
+        print(f"Image {ideal_img_name} not found – using default image ./img/web.jpg")
     audioclip = AudioFileClip(inp)
     new_audioclip = CompositeAudioClip([audioclip])
 
@@ -75,7 +80,7 @@ def convert(inp, outp):
     #Compose
     print("-> Composing clips...")
     txt_composite = CompositeVideoClip([txt_clip], size=(int(w/2),h))
-    final = CompositeVideoClip([cover, txt_composite.set_position(("right", "center"))], size = moviesize)
+    final = CompositeVideoClip([cover.set_position(("left", "center")), txt_composite.set_position(("right", "center"))], size = moviesize)
     final.audio = new_audioclip
     
     #Export

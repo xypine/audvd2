@@ -1,4 +1,4 @@
-# audvd
+# audvd2
 A simple script to convert audioclips to video
 
 ## run_all.sh

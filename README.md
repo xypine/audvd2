@@ -1,5 +1,5 @@
 # audvd2
-A simple script to convert audioclips to video
+A simple script to convert audio to video
 
 ## run_all.sh
 this script downloads all podcasts from the soundcloud channel "KSYK Teatteri-podi" to the folder "music" with [youtube-dl](https://yt-dl.org/) and converts them automatically into video files in "out".
@@ -12,5 +12,5 @@ Install [python3](https://www.python.org/downloads/), then run [run_all.sh](#run
 ## license
 Licenced under the MIT license © Elias Arno Eskelinen 2022, consult [the license file](LICENSE) for further details.
 
-## Troubleshooting
+## troubleshooting
 Please open a github issue if you know how to do that, or contact me at audvd@eliaseskelinen.fi

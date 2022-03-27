@@ -80,7 +80,7 @@ def convert(inp, outp):
     #Compose
     print("-> Composing clips...")
     txt_composite = CompositeVideoClip([txt_clip], size=(int(w/2),h))
-    final = CompositeVideoClip([cover.set_position(("left", "center")), txt_composite.set_position(("right", "center"))], size = moviesize)
+    final = CompositeVideoClip([cover.resize(width=int(w/2)).set_position(("left", "center")), txt_composite.set_position(("right", "center"))], size = moviesize)
     final.audio = new_audioclip
     
     #Export

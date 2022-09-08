@@ -39,7 +39,7 @@ def ui_verify(inp, outp):
 def convert(inp, outp):
     print("Starting edit...")
     
-    print("-> Getting the lenght of the soundfile...")
+    print("-> Getting the length of the soundfile...")
     l = getLen(inp)
     
     #Resolution
